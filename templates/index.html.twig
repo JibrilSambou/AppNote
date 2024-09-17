@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home - Dashboard{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Main Dashboard</h1>
+    </div>
+
+    <!-- Dynamic statistics or content here -->
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card bg-primary text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Students</h5>
+                    <p class="card-text">Display the total number of students here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card bg-success text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Teachers</h5>
+                    <p class="card-text">Display the total number of teachers here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card bg-warning text-white mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Courses in Progress</h5>
+                    <p class="card-text">Display the number of ongoing courses here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Notifications -->
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <h3>Recent Notifications</h3>
+            <ul>
+                <li>Notification 1</li>
+                <li>Notification 2</li>
+                <li>Notification 3</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

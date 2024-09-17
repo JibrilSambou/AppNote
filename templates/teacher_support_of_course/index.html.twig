@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SupportOfCourse index{% endblock %}
+
+{% block body %}
+    <h1>SupportOfCourse index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Fichier_url</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for support_of_course in support_of_courses %}
+            <tr>
+                <td>{{ support_of_course.id }}</td>
+                <td>{{ support_of_course.title }}</td>
+                <td>{{ support_of_course.fichierUrl }}</td>
+                <td>
+                    <a href="{{ path('app_teacher_support_of_course_show', {'id': support_of_course.id}) }}">show</a>
+                    <a href="{{ path('app_teacher_support_of_course_edit', {'id': support_of_course.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_teacher_support_of_course_new') }}">Create new</a>
+{% endblock %}

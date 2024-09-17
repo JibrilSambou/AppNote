@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Welcome to the Student Dashboard</h1>
+
+    <ul>
+        <li><a href="{{ path('app_student_profile') }}">My Profile</a></li>
+        <li><a href="{{ path('app_student_notes') }}">My Grades</a></li>
+        <li><a href="{{ path('app_student_notifications') }}">Notifications</a></li>
+        <li><a href="{{ path('app_student_schedules') }}">Schedules</a></li>
+        <li><a href="{{ path('app_student_courses') }}">Courses</a></li>
+    </ul>
+{% endblock %}
